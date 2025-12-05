@@ -2,6 +2,4 @@
 ## UI/UX Progress
 
 ## Frontend Progress
--
 ## Backend Progress
--
