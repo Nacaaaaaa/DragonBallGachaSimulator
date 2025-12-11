@@ -1,0 +1,283 @@
+/* Asset Warna Bro */
+:root {
+    --primary-red: #E60000;
+    --dark-bg: #1A1A1A;
+    --text-black: #000000;
+    --font-title: 'Rubik Mono One', sans-serif;
+    --font-body: 'BIZ UDPMincho', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+}
+
+/* Edit BG Bro */
+.bg-manga {
+    background-image: url('assets/bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-manga::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+}
+
+/* Edit Title Bro */
+.main-title {
+    font-family: var(--font-title);
+    color: var(--primary-red);
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.main-title-small {
+    font-family: var(--font-title);
+    color: var(--primary-red);
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+.sub-title, .sub-title-small {
+    font-family: var(--font-body);
+    font-weight: bold;
+    color: var(--text-black);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 50; 
+}
+
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.landing-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.landing-visual img {
+    max-width: 100%;
+    height: auto;
+    width: 250px; 
+}
+
+.landing-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.auth-header {
+    margin: 0;
+    text-align: left;
+}
+
+.auth-header.top-left {
+    position: fixed; 
+    top: 50px;
+    left: 50px;
+    z-index: 20; 
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Edit Gambar Naganya Broku */
+.dragon-visual {
+    position: fixed; 
+    bottom: 0px; 
+    right: 0px; 
+    z-index: 10; 
+}
+
+.dragon-visual img {
+    width: 500px;
+    height: auto;
+    margin-bottom: -50px; 
+    pointer-events: none; 
+}
+
+
+/* Edit Formnya Broku */
+.auth-container {
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 30px; 
+    border-radius: 15px;
+    width: 90%;
+    max-width: 350px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    z-index: 30; 
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    font-family: var(--font-body); 
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px; 
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-red);
+}
+
+.auth-links {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.link-text {
+    color: var(--primary-red);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+
+/* Ini Buat Tombol Dawg */
+.btn-primary {
+    background-color: var(--dark-bg);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px; 
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    transform: scale(1.05); 
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Animasi Kece Abiez */
+.fade-in {
+    animation: fadeInAnimation 1s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.floating-img {
+    animation: float-rotate 5s ease-in-out infinite;
+}
+
+@keyframes float-rotate {
+    0% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-15px) rotate(180deg); 
+    }
+    100% { 
+        transform: translateY(0px) rotate(360deg); 
+    }
+}
+
+/* Buat yang Mobile - Mobile Aja */
+@media (max-width: 768px) {
+    .landing-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing-visual {
+        margin-bottom: 30px;
+    }
+    
+    .landing-content {
+        padding-left: 0;
+    }
+
+    .bg-manga {
+        background-position: left center; 
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    /* Ukuran Judul Buat Hape */
+    .auth-header.top-left {
+        top: 20px;
+        left: 20px;
+        padding: 8px 15px;
+    }
+    
+    /* Ukuran Naga Buat Hape */
+    .dragon-visual img {
+        width: 500px;
+        margin-bottom: -30px;
+    }
+}

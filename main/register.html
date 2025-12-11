@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - DragonBall Gacha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-manga">
+
+    <div class="auth-header top-left fade-in">
+        <h1 class="main-title-small">DRAGON<br>BALL</h1>
+        <p class="sub-title-small">ガチャシミュレーター<br>Gacha Simulator</p>
+    </div>
+
+    <div class="auth-container fade-in">
+        <form id="registerForm" onsubmit="event.preventDefault(); validateRegister();">
+            <div class="input-group">
+                <label for="reg-username">USERNAME:</label>
+                <input type="text" id="reg-username" placeholder="Pilih Username">
+            </div>
+
+            <div class="input-group">
+                <label for="reg-email">EMAIL:</label>
+                <input type="email" id="reg-email" placeholder="email@contoh.com">
+            </div>
+
+            <div class="input-group">
+                <label for="reg-password">PASSWORD:</label>
+                <input type="password" id="reg-password" placeholder="Buat Password">
+            </div>
+
+            <button type="submit" class="btn-primary">DAFTAR</button>
+            
+            <br><br>
+            <a href="login.html" class="btn-secondary">Kembali ke Login</a>
+        </form>
+    </div>
+
+    <div class="dragon-visual">
+        <img src="assets/naga.png" alt="Shenron Dragon">
+    </div>
+
+    <div class="copyright">©AkiraToriyama</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
