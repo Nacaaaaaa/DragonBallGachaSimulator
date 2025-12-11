@@ -26,7 +26,7 @@ body {
 
 /* Edit BG Bro */
 .bg-manga {
-    background-image: url('assets/image/program/bg.jpg'); 
+    background-image: url('../assets/image/program/bg.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -282,4 +282,5 @@ body {
     }
 
 }
+
 
