@@ -5,7 +5,7 @@ function goToLogin() {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s';
     setTimeout(() => {
-        window.location.href = 'login.html';
+        window.location.href = 'login.php';
     }, 500);
 }
 
@@ -33,11 +33,14 @@ function validateLogin() {
         return false;
     }
 
-    // Simulasi Login Berhasil
-    alert("Login Berhasil! Selamat datang, Prajurit Saiyan: " + username);
+    // // Simulasi Login Berhasil
+    // alert("Login Berhasil! Selamat datang, Prajurit Saiyan: " + username);
     
-    // Arahkan ke halaman selanjutnya
-    window.location.href = 'dashboard.html'; 
+    // // Arahkan ke halaman selanjutnya
+    // window.location.href = 'dashboard.html'; 
+
+    return true; 
+    //alert dibuat nya di php
 }
 
 // Validasi Register
@@ -77,6 +80,9 @@ function validateRegister() {
         return false;
     }
 
-    alert("Akun berhasil dibuat! Silakan login.");
-    window.location.href = 'login.html';
+    // alert("Akun berhasil dibuat! Silakan login.");
+    // window.location.href = 'login.html';
+
+    return true;    
+    //retrun true biar kode dilanjutin ke php, nanti disana alertnya bakal dieksekusi, bukan disini
 }
