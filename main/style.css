@@ -64,15 +64,6 @@ body {
     letter-spacing: 1px;
 }
 
-.copyright {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    z-index: 50; 
-}
-
 .landing-container {
     display: flex;
     align-items: center;
@@ -282,5 +273,6 @@ body {
     }
 
 }
+
 
 
