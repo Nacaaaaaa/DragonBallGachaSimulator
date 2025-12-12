@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker - DragonBall Gacha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-clicker">
+    <div class="overlay-clicker"></div>
+    
+    <div class="clicker-container fade-in">
+        
+        <div class="clicker-header">
+            <div class="stats-group left">
+                <p>BALLS OBTAINED:</p>
+                <div class="stat-box counter">
+                    <img src="../assets/image/program/dragonball.png" alt="Dragon Ball" class="db-icon">
+                    <span id="ball-counter">0</span>
+                </div>
+            </div>
+
+            <button id="claim-button" class="btn-claim disabled">CLAIM</button>
+            
+            <div class="stats-group right">
+                <p>TARGET:</p>
+                <div class="stat-box target">
+                    <span id="target-value">160</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="click-area" id="goku-click-area">
+            <div class="goku-visual-box">
+                <img src="../assets/image/program/clicker1.png" alt="Goku Base Form" id="goku-image" class="goku-image">
+                <span class="tap-text">TAP!</span>
+            </div>
+        </div>
+
+        <div class="clicker-footer">
+            <a href="dashboard.html" class="btn-back-menu">BACK TO MENU</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
