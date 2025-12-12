@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST" && isset($_POST['claim'])){
         </div>
 
         <div class="clicker-footer">
-            <a href="dashboard.html" class="btn-back-menu">BACK TO MENU</a>
+            <a href="dashboard.php" class="btn-back-menu">BACK TO MENU</a>
         </div>
     </div>
 
