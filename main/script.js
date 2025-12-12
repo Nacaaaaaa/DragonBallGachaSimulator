@@ -111,9 +111,12 @@ function updateCounter() {
 
 function handleClaim() {
     const claimButton = document.getElementById('claim-button');
+    const claimForm = document.getElementById('claimForm');
     
+    // diganti biar alert berhasil dijalanin ada di php
     if (claimButton && balls >= targetValue) {
-        alert("Berhasil Klaim 160 Dragon Balls! Bola Anda sekarang direset.");
+        claimButton.type = "submit";
+        claimForm.submit();
         balls = 0;
         updateCounter();
     } else if (claimButton) {
