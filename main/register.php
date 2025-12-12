@@ -37,6 +37,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-manga">
+    <div class="overlay-cover"></div>
+    
     <div class="auth-header top-left fade-in">
         <h1 class="main-title-small">DRAGON<br>BALL</h1>
         <p class="sub-title-small">ガチャシミュレーター<br>Gacha Simulator</p>
