@@ -170,17 +170,19 @@ function initializeClicker() {
 
 // LOGIKA GACHA PAGE & COLLECTION PAGE
 // Simulasi Data Karakter
-const CHARACTERS = [
-    { id: 0, name: "Goku – Base Form", rarity: "★★", type: "Saiyan", power: 5000, speed: 4500, defense: 3000, skill: "Kamehameha", image: "../assets/image/program/colle1.jpg" },
-    { id: 1, name: "Goku – Super Saiyan", rarity: "★★★★★", type: "God Ki / Saiyan", power: 12000, speed: 9500, defense: 8900, skill: "Final Flash Supreme", image: "../assets/image/program/colle1.jpg" },
-    { id: 2, name: "Vegeta – Super Saiyan", rarity: "★★★★", type: "Saiyan Elite", power: 10000, speed: 8000, defense: 7500, skill: "Galick Gun", image: "../assets/image/character/program/colle1.jpg" },
-];
 
-// Data simulasi koleksi yang sudah didapatkan
-let obtainedCharacters = [CHARACTERS[1].id];
+// data dipindah ke database
+// const CHARACTERS = [
+//     { id: 0, name: "Goku – Base Form", rarity: "★★", type: "Saiyan", power: 5000, speed: 4500, defense: 3000, skill: "Kamehameha", image: "../assets/image/program/colle1.jpg" },
+//     { id: 1, name: "Goku – Super Saiyan", rarity: "★★★★★", type: "God Ki / Saiyan", power: 12000, speed: 9500, defense: 8900, skill: "Final Flash Supreme", image: "../assets/image/program/colle1.jpg" },
+//     { id: 2, name: "Vegeta – Super Saiyan", rarity: "★★★★", type: "Saiyan Elite", power: 10000, speed: 8000, defense: 7500, skill: "Galick Gun", image: "../assets/image/character/program/colle1.jpg" },
+// ];
 
-let credits = 180;
-const summonCost = 160;
+// // Data simulasi koleksi yang sudah didapatkan
+// let obtainedCharacters = [CHARACTERS[1].id];
+
+// let credits = 180;
+// const summonCost = 160;
 
 // Fungsi untuk menampilkan status (landing, summoning, result)
 function showGachaState(stateId) {
@@ -193,24 +195,26 @@ function showGachaState(stateId) {
     });
 }
 
-function updateCreditsDisplay() {
-    const creditDisplay = document.getElementById('current-credits');
-    const summonButton = document.getElementById('summon-button');
-    if (creditDisplay) {
-        creditDisplay.textContent = credits;
-    }
-    if (summonButton) {
-        if (credits < summonCost) {
-            summonButton.disabled = true;
-            summonButton.textContent = `SUMMON 1X (${summonCost} Needed)`;
-            summonButton.classList.add('disabled');
-        } else {
-            summonButton.disabled = false;
-            summonButton.textContent = 'SUMMON 1X';
-            summonButton.classList.remove('disabled');
-        }
-    }
-}
+// pengecekan dipindah ke php
+
+// function updateCreditsDisplay() {
+//     const creditDisplay = document.getElementById('current-credits');
+//     const summonButton = document.getElementById('summon-button');
+//     if (creditDisplay) {
+//         creditDisplay.textContent = credits;
+//     }
+//     if (summonButton) {
+//         if (credits < summonCost) {
+//             summonButton.disabled = true;
+//             summonButton.textContent = `SUMMON 1X (${summonCost} Needed)`;
+//             summonButton.classList.add('disabled');
+//         } else {
+//             summonButton.disabled = false;
+//             summonButton.textContent = 'SUMMON 1X';
+//             summonButton.classList.remove('disabled');
+//         }
+//     }
+// }
 
 // Animasi Teks Summoning
 function animateSummoningText() {
@@ -228,38 +232,52 @@ function animateSummoningText() {
 }
 
 // Simulasi Gacha
-function summonCharacter() {
-    if (credits < summonCost) {
-        alert("Bola Naga tidak cukup untuk melakukan Summon! Kumpulkan 160 Bola Naga.");
-        return;
-    }
+// function summonCharacter() {
+//     if (credits < summonCost) {
+//         alert("Bola Naga tidak cukup untuk melakukan Summon! Kumpulkan 160 Bola Naga.");
+//         return;
+//     }
     
-    credits -= summonCost;
-    updateCreditsDisplay();
+//     credits -= summonCost;
+//     updateCreditsDisplay();
     
-    showGachaState('gacha-summoning');
-    const animationInterval = animateSummoningText();
+//     showGachaState('gacha-summoning');
+//     const animationInterval = animateSummoningText();
     
-    setTimeout(() => {
-        clearInterval(animationInterval);
+//     setTimeout(() => {
+//         clearInterval(animationInterval);
         
-        const randomIndex = Math.floor(Math.random() * CHARACTERS.length);
-        const obtainedChar = CHARACTERS[randomIndex];
+//         const randomIndex = Math.floor(Math.random() * CHARACTERS.length);
+//         const obtainedChar = CHARACTERS[randomIndex];
         
-        if (!obtainedCharacters.includes(obtainedChar.id)) {
-            obtainedCharacters.push(obtainedChar.id);
-        }
+//         if (!obtainedCharacters.includes(obtainedChar.id)) {
+//             obtainedCharacters.push(obtainedChar.id);
+//         }
         
-        displayResult(obtainedChar);
+//         displayResult(obtainedChar);
 
-    }, 3000);
-}
+//     }, 3000);
+// }
 
 // Menampilkan Hasil Gacha
 function displayResult(char) {
-    document.getElementById('char-image').src = char.image || '../assets/image/program/colle1.jpg';
+    // document.getElementById('char-image').src = char.image || '../assets/image/program/colle1.jpg';
+    // document.getElementById('char-name').textContent = char.name;
+    // document.getElementById('char-rarity').textContent = "★".repeat(char.rarity.length);
+    // document.getElementById('char-type').textContent = char.type;
+    // document.getElementById('char-power').textContent = char.power;
+    // document.getElementById('char-speed').textContent = char.speed;
+    // document.getElementById('char-defense').textContent = char.defense;
+    // document.getElementById('char-skill').textContent = char.skill;
+
+    // showGachaState('gacha-result');
+
+    let imagePath = char.image;
+    document.getElementById('char-image').src = imagePath;
     document.getElementById('char-name').textContent = char.name;
-    document.getElementById('char-rarity').textContent = "★".repeat(char.rarity.length);
+    const rarityElement = document.getElementById('char-rarity');
+    rarityElement.textContent = char.rarity;
+
     document.getElementById('char-type').textContent = char.type;
     document.getElementById('char-power').textContent = char.power;
     document.getElementById('char-speed').textContent = char.speed;
@@ -271,15 +289,16 @@ function displayResult(char) {
 
 // Inisialisasi Gacha
 function initializeGacha() {
-    const summonButton = document.getElementById('summon-button');
+    // tombol sudah jadi form
+    // const summonButton = document.getElementById('summon-button');
     const backToGachaButton = document.getElementById('back-to-gacha');
 
-    updateCreditsDisplay();
-    showGachaState('gacha-landing');
+    // updateCreditsDisplay();
+    // showGachaState('gacha-landing');
 
-    if (summonButton) {
-        summonButton.addEventListener('click', summonCharacter);
-    }
+    // if (summonButton) {
+    //     summonButton.addEventListener('click', summonCharacter);
+    // }
 
     if (backToGachaButton) {
         backToGachaButton.addEventListener('click', () => {
