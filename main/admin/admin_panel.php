@@ -1,11 +1,9 @@
 <?php
 session_start();
 include("../conn.php");
+include("../function.php");
 
-if(!isset($_SESSION['username']) || $_SESSION['role']!="admin"){
-    header("Location: login.php");
-    exit();
-}
+cekAdmin();
 
 // hapus (delete)
 if(isset($_GET['hapus'])){

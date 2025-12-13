@@ -1,11 +1,9 @@
 <?php
 session_start();
 include("conn.php");
+include("function.php");
 
-if(!isset($_SESSION['username'])){
-    header("Location: login.php");
-    exit();
-}
+cekLogin();
 
 $username=$_SESSION['username'];
 $hasilGacha=null;
