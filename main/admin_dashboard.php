@@ -34,7 +34,7 @@ $username=$_SESSION['username'];
         </div>
 
         <div class="nav-buttons">
-            <a href="admin_panel.html" class="btn-nav">Admin Panel</a>
+            <a href="admin_panel.php" class="btn-nav">Admin Panel</a>
         </div>
 
         <div class="db-subtitle-box">
