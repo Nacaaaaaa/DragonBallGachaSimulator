@@ -393,3 +393,24 @@ document.addEventListener('DOMContentLoaded', () => {
     //     initializeCollection();
     // }
 });
+
+function openEditModal(button) {
+    // ambil data dari tombol yang diklik
+    const id = button.getAttribute('data-id');
+    const username = button.getAttribute('data-username');
+    const role = button.getAttribute('data-role');
+    const coins = button.getAttribute('data-coins');
+
+    // masukkan data ke dalam form Modal
+    document.getElementById('edit_id').value = id;
+    document.getElementById('edit_username').value = username;
+    document.getElementById('edit_role').value = role;
+    document.getElementById('edit_coins').value = coins;
+
+    // tampilkan Modal
+    document.getElementById('editModal').classList.remove('hidden');
+}
+
+function closeEditModal() {
+    document.getElementById('editModal').classList.add('hidden');
+}
