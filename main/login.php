@@ -3,7 +3,11 @@ session_start();
 include("conn.php");
 
 if(isset($_SESSION["username"])){
-    header("Location: dashboard.php");
+    if($_SESSION['role']==="admin"){
+        header("Location: admin_dashboard.php");
+    }else{
+        header("Location: dashboard.php");
+    }
     exit();
 }
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -17,10 +21,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if($password==$row['password']){
             $_SESSION['username']=$row['username'];
             $_SESSION['role']=$row['role'];
+            
+            $target="dashboard.php";
+            if($_SESSION['role']==="admin"){
+                $target="admin_dashboard.php";
+            }
 
             echo "<script>
                 alert('Login Berhasil! Selamat datang, Prajurit Saiyan: ".$row['username']."');
-                window.location.href = 'dashboard.php';
+                window.location.href = '$target';
                 </script>";
             exit();
         }else{
