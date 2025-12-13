@@ -21,10 +21,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if($password==$row['password']){
             $_SESSION['username']=$row['username'];
             $_SESSION['role']=$row['role'];
-            
+
             $target="dashboard.php";
             if($_SESSION['role']==="admin"){
-                $target="admin_dashboard.php";
+                $target="admin/admin_dashboard.php";
             }
 
             echo "<script>
