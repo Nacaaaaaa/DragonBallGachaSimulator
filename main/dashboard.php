@@ -1,9 +1,8 @@
 <?php
 session_start();
-if(!isset($_SESSION['username'])){
-    header("Location: login.php");
-    exit();
-}
+
+include("function.php");
+cekLogin();
 
 $username=$_SESSION['username'];
 $role=$_SESSION['role'];
@@ -32,6 +31,8 @@ $role=$_SESSION['role'];
             <a href="clicker.php" class="btn-nav">Clicker</a>
             <a href="gacha.php" class="btn-nav gacha">Gacha</a>
             <a href="collection.php" class="btn-nav">Your Collection</a>
+
+            <a href="logout.php" class="btn-logout">LOGOUT</a>
         </div>
 
         <div class="db-subtitle-box">

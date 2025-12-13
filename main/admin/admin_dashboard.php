@@ -1,14 +1,9 @@
 <?php
 session_start();
+include("../function.php");
 
-if(!isset($_SESSION['username'])){
-    header("Location: login.php");
-    exit();
-}
-if($_SESSION['role']!='admin'){
-    header("Location: dashboard.php");
-    exit();
-}
+
+cekAdmin();
 
 $username=$_SESSION['username'];
 ?>
@@ -35,6 +30,7 @@ $username=$_SESSION['username'];
 
         <div class="nav-buttons">
             <a href="admin_panel.php" class="btn-nav">Admin Panel</a>
+            <a href="../logout.php" class="btn-logout">LOGOUT</a>
         </div>
 
         <div class="db-subtitle-box">
