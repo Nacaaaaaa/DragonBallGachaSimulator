@@ -309,21 +309,20 @@ function initializeGacha() {
 
 // LOGIKA COLLECTION PAGE
 // Fungsi untuk menampilkan detail di Modal
-function showCharacterDetails(charIndex) {
-    const char = CHARACTERS.find(c => c.id == charIndex);
+function showCharacterDetails(element) {
     const modal = document.getElementById('character-modal');
-    
-    if (!char || !modal) return;
-    
+    if (!modal) return;
+
+    const data = element.dataset;
     // Isi Detail Modal
-    document.getElementById('modal-char-image').src = char.image || '../assets/image/program/colle1.jpg';
-    document.getElementById('modal-char-name').textContent = char.name;
-    document.getElementById('modal-char-rarity').textContent = "★".repeat(char.rarity.length);
-    document.getElementById('modal-char-type').textContent = char.type;
-    document.getElementById('modal-char-power').textContent = char.power;
-    document.getElementById('modal-char-speed').textContent = char.speed;
-    document.getElementById('modal-char-defense').textContent = char.defense;
-    document.getElementById('modal-char-skill').textContent = char.skill;
+    document.getElementById('modal-char-image').src = data.image;
+    document.getElementById('modal-char-name').textContent = data.name;
+    document.getElementById('modal-char-rarity').textContent = data.rarity;
+    document.getElementById('modal-char-type').textContent = data.type;
+    document.getElementById('modal-char-power').textContent = data.power;
+    document.getElementById('modal-char-speed').textContent = data.speed;
+    document.getElementById('modal-char-defense').textContent = data.defense;
+    document.getElementById('modal-char-skill').textContent = data.skill;
     
     modal.classList.remove('hidden');
     
@@ -337,46 +336,49 @@ function hideCharacterDetails() {
 }
 
 // Fungsi untuk menggambar koleksi karakter
-function initializeCollection() {
-    const grid = document.getElementById('character-grid');
-    if (!grid) return;
+
+// dipindah ke php
+
+// function initializeCollection() {
+//     const grid = document.getElementById('character-grid');
+//     if (!grid) return;
     
-    grid.innerHTML = '';
+//     grid.innerHTML = '';
     
-    CHARACTERS.forEach(char => {
-        const isUnlocked = obtainedCharacters.includes(char.id);
-        const item = document.createElement('div');
-        item.className = `character-item ${isUnlocked ? 'unlocked' : 'locked'}`;
-        item.setAttribute('data-index', char.id);
+//     CHARACTERS.forEach(char => {
+//         const isUnlocked = obtainedCharacters.includes(char.id);
+//         const item = document.createElement('div');
+//         item.className = `character-item ${isUnlocked ? 'unlocked' : 'locked'}`;
+//         item.setAttribute('data-index', char.id);
         
-        let content = `
-            <div class="char-thumb-box">
-        `;
+//         let content = `
+//             <div class="char-thumb-box">
+//         `;
         
-        if (isUnlocked) {
-            content += `<img src="${char.image || '../assets/image/program/colle1.jpg'}" alt="${char.name}" class="char-thumb-img">`;
-        } else {
-            content += `
-                <div class="locked-overlay">
-                    <span class="locked-text">LOCKED</span>
-                </div>
-            `;
-        }
+//         if (isUnlocked) {
+//             content += `<img src="${char.image || '../assets/image/program/colle1.jpg'}" alt="${char.name}" class="char-thumb-img">`;
+//         } else {
+//             content += `
+//                 <div class="locked-overlay">
+//                     <span class="locked-text">LOCKED</span>
+//                 </div>
+//             `;
+//         }
         
-        content += `
-            </div>
-            <p class="char-thumb-name">${char.name}</p>
-        `;
+//         content += `
+//             </div>
+//             <p class="char-thumb-name">${char.name}</p>
+//         `;
         
-        item.innerHTML = content;
+//         item.innerHTML = content;
         
-        if (isUnlocked) {
-            item.addEventListener('click', () => showCharacterDetails(char.id));
-        }
+//         if (isUnlocked) {
+//             item.addEventListener('click', () => showCharacterDetails(char.id));
+//         }
         
-        grid.appendChild(item);
-    });
-}
+//         grid.appendChild(item);
+//     });
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('goku-click-area')) {
@@ -387,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initializeGacha();
     }
     
-    if (document.getElementById('collection-container')) {
-        initializeCollection();
-    }
+    // if (document.getElementById('collection-container')) {
+    //     initializeCollection();
+    // }
 });

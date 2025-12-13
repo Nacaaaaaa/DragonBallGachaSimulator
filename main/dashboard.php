@@ -31,7 +31,7 @@ $role=$_SESSION['role'];
         <div class="nav-buttons">
             <a href="clicker.php" class="btn-nav">Clicker</a>
             <a href="gacha.php" class="btn-nav gacha">Gacha</a>
-            <a href="collection.html" class="btn-nav">Your Collection</a>
+            <a href="collection.php" class="btn-nav">Your Collection</a>
         </div>
 
         <div class="db-subtitle-box">
