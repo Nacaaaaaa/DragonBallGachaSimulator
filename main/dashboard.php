@@ -27,7 +27,7 @@ $role=$_SESSION['role'];
             <h1 class="main-title-small">DRAGON<br>BALL</h1>
         </div>
 
-        <div class="nav-buttons">a
+        <div class="nav-buttons">
             <a href="clicker.php" class="btn-nav">Clicker</a>
             <a href="gacha.php" class="btn-nav gacha">Gacha</a>
             <a href="collection.php" class="btn-nav">Your Collection</a>
