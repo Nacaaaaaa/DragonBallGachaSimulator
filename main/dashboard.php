@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("function.php");
+include("config/function.php");
 cekLogin();
 
 $username=$_SESSION['username'];
@@ -17,7 +17,7 @@ $role=$_SESSION['role'];
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-manga bg-dashboard">
     <div class="overlay-cover"></div> 
@@ -27,7 +27,7 @@ $role=$_SESSION['role'];
             <h1 class="main-title-small">DRAGON<br>BALL</h1>
         </div>
 
-        <div class="nav-buttons">
+        <div class="nav-buttons">a
             <a href="clicker.php" class="btn-nav">Clicker</a>
             <a href="gacha.php" class="btn-nav gacha">Gacha</a>
             <a href="collection.php" class="btn-nav">Your Collection</a>
@@ -40,6 +40,6 @@ $role=$_SESSION['role'];
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

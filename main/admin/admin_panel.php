@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("../conn.php");
-include("../function.php");
+include("../config/conn.php");
+include("../config/function.php");
 
 cekAdmin();
 
@@ -54,7 +54,7 @@ $queryUser=mysqli_query($koneksi, "select*from users");
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="bg-admin">
     <div class="overlay-clicker"></div> <div class="admin-container fade-in">
@@ -148,6 +148,6 @@ $queryUser=mysqli_query($koneksi, "select*from users");
         </div>
     </div>
     
-    <script src="../script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

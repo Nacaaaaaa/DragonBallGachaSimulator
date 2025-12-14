@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("conn.php");
+include("config/conn.php");
 
 if(isset($_SESSION["username"])){
     if($_SESSION['role']==="admin"){
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-manga">
     <div class="overlay-cover"></div>
@@ -83,10 +83,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     </div>
     
     <div class="dragon-visual">
-        <img src="../assets/image/program/naga.png" alt="Shenron Dragon"> 
+        <img src="assets/image/program/naga.png" alt="Shenron Dragon"> 
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
 

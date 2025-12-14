@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2025 at 06:20 AM
+-- Generation Time: Dec 14, 2025 at 02:23 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,10 +44,10 @@ CREATE TABLE `characters` (
 --
 
 INSERT INTO `characters` (`id`, `name`, `rarity`, `type`, `power`, `speed`, `defense`, `skill`, `image`) VALUES
-(1, 'Goku – Base Form', '★★', 'Saiyan', 5000, 4500, 3000, 'Kamehameha', '../assets/image/program/karakter/son goku.jpg'),
-(2, 'Goku – Super Saiyan', '★★★★★', 'Saiyan', 12000, 9500, 8900, 'Final Flash Supreme', '../assets/image/program/karakter/son goku(saiyan).jpg'),
-(3, 'Vegeta – Super Saiyan', '★★★★', 'Saiyan', 10000, 8000, 7500, 'Galick Gun', '../assets/image/program/karakter/vegeta.jpg'),
-(4, 'Gohan – Teen (Base Form)', '★★★', 'Saiyan - Earthling', 4800, 4800, 3200, 'Masenko', '../assets/image/program/karakter/gohan.jpg');
+(1, 'Goku – Base Form', '★★', 'Saiyan', 5000, 4500, 3000, 'Kamehameha', 'assets/image/program/karakter/son goku.jpg'),
+(2, 'Goku – Super Saiyan', '★★★★★', 'Saiyan', 12000, 9500, 8900, 'Final Flash Supreme', 'assets/image/program/karakter/son goku(saiyan).jpg'),
+(3, 'Vegeta – Super Saiyan', '★★★★', 'Saiyan', 10000, 8000, 7500, 'Galick Gun', 'assets/image/program/karakter/vegeta.jpg'),
+(4, 'Gohan – Teen (Base Form)', '★★★', 'Saiyan - Earthling', 4800, 4800, 3200, 'Masenko', 'assets/image/program/karakter/gohan.jpg');
 
 -- --------------------------------------------------------
 
@@ -69,8 +69,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `coins`) VALUES
-(1, 'bambang', 'bambang@yahoo.com', 'bambang1', 'user', 9999999),
-(2, 'bambanga', 'bambang@a.v', 'b1111', 'user', 9999),
+(1, 'bambang', 'bambang@yahoo.com', 'bambang1', 'user', 10000479),
+(2, 'bambanga', 'bambang@a.v', 'b1111', 'user', 9359),
 (3, 'admin', 'admin@gmail.com', 'admin123', 'admin', 9999999);
 
 -- --------------------------------------------------------
@@ -96,7 +96,8 @@ INSERT INTO `user_characters` (`id`, `user_id`, `character_id`) VALUES
 (31, 1, 1),
 (32, 2, 1),
 (33, 2, 3),
-(38, 1, 4);
+(38, 1, 4),
+(39, 2, 4);
 
 --
 -- Indexes for dumped tables
@@ -144,7 +145,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_characters`
 --
 ALTER TABLE `user_characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- Constraints for dumped tables
