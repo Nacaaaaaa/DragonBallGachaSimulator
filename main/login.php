@@ -4,7 +4,7 @@ include("config/conn.php");
 
 if(isset($_SESSION["username"])){
     if($_SESSION['role']==="admin"){
-        header("Location: admin_dashboard.php");
+        header("Location: admin/admin_dashboard.php");
     }else{
         header("Location: dashboard.php");
     }
