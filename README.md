@@ -54,13 +54,14 @@
     └── register.php        # Form pendaftaran akun baru
 ```
 ## 🛠️ Teknologi yang Digunakan
+- UI/UX Design: Figma (https://www.figma.com/design/eU4dt5hc71pJY68DyQhfgN/Responsi-Pemweb--Dragon-Ball?node-id=0-1&t=o63PsFRggYomN1NK-1)
 - Frontend: HTML5, CSS3, JavaScript.
 - Backend: PHP (Native).
 - Database: MySQL.
 
 ## Demo Aplikasi
 Video Simulasi Website <br>
-![Simulasi](main/assets/image/progress/SimulasiWebsite.gif)
+![Simulasi](main/assets/image/progress/Simulasi.gif)
 
 ## 🚀 Cara Instalasi
 1. Clone/Download repositori ini.
@@ -78,6 +79,6 @@ Video Simulasi Website <br>
   - Buka browser dan akses localhost/nama-folder-proyek.
 
 ## 👷‍♂️ Kontributor
-1. Nalendra Wicaksana (H1D024073)
-2. Cahya Azali Desta Putri (H1D024088)
-3. Revaldi Enzha Agviandry P (H1D024094)
+1. Nalendra Wicaksana (H1D024073) Sebagai Frontend 
+2. Cahya Azali Desta Putri (H1D024088) Sebagai UI/UX Designer
+3. Revaldi Enzha Agviandry P (H1D024094) Sebagai Backend
