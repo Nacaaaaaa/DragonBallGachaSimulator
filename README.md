@@ -59,8 +59,8 @@
 - Database: MySQL.
 
 ## Demo Aplikasi
-Video Simulasi Website 
--![Simulasi](main/assets/image/progress/SimulasiWebsite.gif)
+Video Simulasi Website <br>
+![Simulasi](main/assets/image/progress/SimulasiWebsite.gif)
 
 ## 🚀 Cara Instalasi
 1. Clone/Download repositori ini.
