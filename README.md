@@ -54,9 +54,9 @@
     └── register.php        # Form pendaftaran akun baru
 ```
 ## 🛠️ Teknologi yang Digunakan
-Frontend: HTML5, CSS3, JavaScript.
-Backend: PHP (Native).
-Database: MySQL.
+- Frontend: HTML5, CSS3, JavaScript.
+- Backend: PHP (Native).
+- Database: MySQL.
 
 🚀 Cara Instalasi (Localhost)
 1. Clone/Download repositori ini.
