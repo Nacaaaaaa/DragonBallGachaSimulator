@@ -58,7 +58,7 @@
 - Backend: PHP (Native).
 - Database: MySQL.
 
-🚀 Cara Instalasi (Localhost)
+## 🚀 Cara Instalasi
 1. Clone/Download repositori ini.
   - Pindahkan folder proyek ke dalam folder server lokal (misal: htdocs pada XAMPP).
 
@@ -72,3 +72,8 @@
 
 4. Jalankan:
   - Buka browser dan akses localhost/nama-folder-proyek.
+
+## 👷‍♂️ Kontributor
+1. Nalendra Wicaksana (H1D024073)
+2. Cahya Azali Desta Putri (H1D024088)
+3. Revaldi Enzha Agviandry P (H1D024094)
