@@ -22,7 +22,7 @@
   - Menghapus akun user (tidak bisa menghapus akun admin).
 
 ## 📂 Struktur Folder
-
+```text
 / (Root Directory)
 │
 ├── db/                     # Berisi file backup database (.sql)
@@ -52,7 +52,7 @@
     ├── login.php           # Form Login pengguna
     ├── logout.php          # Script untuk mengakhiri sesi (Logout)
     └── register.php        # Form pendaftaran akun baru
-
+```
 ## 🛠️ Teknologi yang Digunakan
 Frontend: HTML5, CSS3, JavaScript.
 Backend: PHP (Native).
